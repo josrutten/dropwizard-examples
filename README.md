@@ -7,14 +7,14 @@ configuration, metrics, operational tools and more.
 
 # Running the samples
 
-To run the examples first you must issue a build.
+To run the examples simply execute:
 
-    $ mvn package
+    $ mvn exec:java
 
-This builds an executable jar in the `target` directory.
+This runs the main class com.github.bjpbakker.dropwizardexamples.Main with arguments:server config/config.yml
 
 To run the examples simply execute the jar and provide it your configuration. A default 
-configuration is available in `config/config.yml`.
+configuration is available in `config/config.yml`. You can override the default configuration file by running:
 
-    $ java -jar target/dropwizard-examples.jar server config/config.yml
+    $ java exec:java -Dexec.args="server config/myownconfiguration.yml"
 
